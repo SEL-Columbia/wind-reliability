@@ -1,0 +1,9 @@
+cartopy
+cupy
+datetime
+h5py
+matplotlib
+os
+numpy
+pandas
+scipy
