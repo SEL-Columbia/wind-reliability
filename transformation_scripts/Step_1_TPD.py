@@ -1,7 +1,13 @@
 import h5py
 import numpy as np
+import os
 import pandas as pd
 from scipy import stats
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../utils')))
+import print_dataset
+
+# Import the function from print_dataset.py
 
 # Read the NOW23 h5 file in write mode
 file = h5py.File(r'E:\\NOW23\\Mid_Atlantic_2015_160m.h5', 'r+')
@@ -84,3 +90,6 @@ for i in range(0, original_shape[0], chunk_size):
     print(f"Steps {i+1}-{end} of {original_shape[0]} completed")
 
 file.close()
+
+# Print the dataset to verify the transformation
+print_dataset(r'E:\\NOW23\\Mid_Atlantic_2015_160m.h5', 'turbine_power_density', 0)

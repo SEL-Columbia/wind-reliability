@@ -21,6 +21,6 @@ wind-reliability
 ├── data_visualization.ipynb
 ├── transformation_scripts/
 │   ├── __init__.py
-├── functions
+├── utils
 │   ├── 
 ```
