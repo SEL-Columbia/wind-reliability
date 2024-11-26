@@ -92,4 +92,5 @@ for i in range(0, original_shape[0], chunk_size):
 file.close()
 
 # Print the dataset to verify the transformation
-print_dataset(r'E:\\NOW23\\Mid_Atlantic_2015_160m.h5', 'turbine_power_density', 0)
+file = h5py.File(r'E:\\NOW23\\Mid_Atlantic_2015_160m.h5', 'r')
+print_dataset(file, 'turbine_power_density', 0)
