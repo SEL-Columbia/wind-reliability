@@ -54,3 +54,21 @@ file.close()
 # Print the dataset to verify the transformation
 file = h5py.File(r'E:\\NOW23\\Mid_Atlantic_160m_TPC.h5', 'r')
 print_dataset(file, 'average_CSTPD')
+
+# Converting the average_CSTPD dataset to percentile
+file = h5py.File(r'E:\\NOW23\\Mid_Atlantic_160m_TPC.h5', 'r+')
+
+# Get the shape of the original dataset
+original_shape = file['average_CSTPD'].shape
+
+# Delete the existing 'average_CSWPD' dataset if it exists
+if 'percentile_rank_of_wind_power_density' in file:
+    del file['percentile_rank_of_wind_power_density']
+
+percentile_rank_of_wind_power_density = file.create_dataset('percentile_rank_of_wind_power_density', data = stats.rankdata(file['average_CSTPD'], nan_policy='omit')*100/original_shape[0])
+
+file.close()
+
+# Print the dataset to verify the transformation
+file = h5py.File(r'E:\\NOW23\\Mid_Atlantic_160m_TPC.h5', 'r')
+print_dataset(file, 'percentile_rank_of_wind_power_density')
