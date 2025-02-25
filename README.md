@@ -1,6 +1,6 @@
 # wind-reliability
 
-Repository for the "Assessing Reliability in Wind Locations of the U.S. Mid-Atlantic Region" paper. 
+Repository for the "Assessing the Reliability of Wind in the U.S. Mid-Atlantic Region" paper. 
 Corresponding author: Jiarong Xie (any/all), jx2543@columbia.edu
 
 ## Overview
