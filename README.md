@@ -1,7 +1,7 @@
 # wind-reliability
 
-Repository for the "Assessing the Reliability of Wind in the U.S. Mid-Atlantic Region" paper. 
-Corresponding author: Jiarong Xie (any/all), jx2543@columbia.edu
+Repository for the "A Combined Capacity Factor-Reliability Framework for Offshore Wind Siting: A Case Study in the U.S. Mid-Atlantic Region" paper. 
+Corresponding author: Jiarong Xie, jx2543@columbia.edu
 
 ## Overview
 
